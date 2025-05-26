@@ -95,7 +95,7 @@ const prevTestimonial = () => {
 						
 						<div className="md:w-2/3 text-center md:text-left">
 							<p className="text-gray-700 italic mb-6 leading-relaxed">
-								"{testimonials[currentIndex].quote}"
+								&quot;{testimonials[currentIndex].quote}&quot;
 							</p>
 							
 							<h4 className="text-xl font-semibold text-gray-800">

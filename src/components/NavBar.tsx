@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,12 +36,12 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Acceuil</a>
-            <a href="/#about" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">A propos</a>
-            <a href="/#services" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Soins</a>
-            <a href="/#testimonials" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Avis</a>
-            <a href="/#blog" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Blog</a>
-            <a href="/#contact" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Contact</a>
+            <Link href="/" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Acceuil</Link>
+            <Link href="/#about" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">A propos</Link>
+            <Link href="/#services" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Soins</Link>
+            <Link href="/#testimonials" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Avis</Link>
+            <Link href="/#blog" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Blog</Link>
+            <Link href="/#contact" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Contact</Link>
           </div>
 
           <div className="hidden md:block">
@@ -71,55 +72,55 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="px-4 py-2 space-y-3">
-          <a 
-            href="#home" 
+          <Link 
+            href="/" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Acceuil
-          </a>
-          <a 
-            href="#about" 
+          </Link>
+          <Link 
+            href="/#about" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             A propos
-          </a>
-          <a 
-            href="#services" 
+          </Link>
+          <Link 
+            href="/#services" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Soins
-          </a>
-          <a 
-            href="#testimonials" 
+          </Link>
+          <Link 
+            href="/#testimonials" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Avis
-          </a>
-          <a 
-            href="#blog" 
+          </Link>
+          <Link 
+            href="/#blog" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Blog
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="#contact" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </a>
-          <a 
-            href="#contact" 
+          </Link>
+          <Link 
+            href="/#contact" 
             className="block py-2 bg-purple-600 hover:bg-purple-700 text-white px-4 rounded-full transition-colors text-center shadow-md"
             onClick={() => setIsOpen(false)}
           >
             Prendre RDV
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
