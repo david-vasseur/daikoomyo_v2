@@ -1,9 +1,12 @@
 import React from 'react';
 import postData from '@/data/postData';
 
-async function Page({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: { slug: string };
+}
 
-	const { slug } = await params;
+const Page = async ({ params }: PageProps) => {
+  const slug = params.slug;
 
     const article = postData.find(art => art.slug === slug);
 
