@@ -38,16 +38,45 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Acceuil</Link>
             <Link href="/#about" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">A propos</Link>
-            <Link href="/#services" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Soins</Link>
-            <Link href="/#testimonials" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Avis</Link>
-            <Link href="/#blog" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Blog</Link>
-            <Link href="/#contact" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Contact</Link>
+            <li className="list-none text-gray-700 font-semibold hover:text-purple-600 transition-colors group cursor-pointer">
+                <Link href="/#services" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Accompagnement & Soins</Link>
+                <ul className={`absolute block pt-[12px] pb-4 text-left h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:h-[180%] group-hover:opacity-100 z-10 rounded-b-lg ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent' }`}>
+                    <li>
+                        <Link
+                        href="/soin-energetique"
+                        className="whitespace-nowrap p-1 -mx-[1px]  text-gray-700 font-semibold hover:text-purple-600 transition-colors"
+                        >
+                        Soin Énergétique
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                        href="/eft"
+                        className="whitespace-nowrap p-1  text-gray-700 font-semibold hover:text-purple-600 transition-colors"
+                        >
+                        EFT
+                        </Link>
+                    </li>                    
+                    <li>
+                        <Link
+                        href="/fleurs-de-bach"
+                        className="whitespace-nowrap p-1  text-gray-700 font-semibold hover:text-purple-600 transition-colors"
+                        >
+                        Fleurs de Bach
+                        </Link>
+                    </li>
+                </ul>
+            </li>
+            <Link href="/#contact" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Contact</Link>            
+            <Link href="/blog" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Blog</Link>
+            <Link href="/#avis" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Avis</Link>
+            
           </div>
 
           <div className="hidden md:block">
             <a 
-              href="#contact" 
-              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-full transition-colors shadow-md border-2 border-purple-800"
+              href="/#contact" 
+              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-md border-2 border-purple-800"
             >
               Prendre RDV
             </a>
@@ -94,14 +123,14 @@ const Navbar: React.FC = () => {
             Soins
           </Link>
           <Link 
-            href="/#testimonials" 
+            href="/#avis" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Avis
           </Link>
           <Link 
-            href="/#blog" 
+            href="/blog" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >

@@ -1,32 +1,23 @@
-"use client"
-
-import { usePathname } from 'next/navigation';
 import React from 'react';
-import priceData from '../../data/priceData';
+import IContent from '@/types/page';
 
-function Price() {
-
-    const router = usePathname();
-
-    const pathName = router.replace(/^\/+/, '');
-
-    const price = priceData.find(el => el.name === pathName)
+function Price({ content }: { content: IContent}) {
 
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-serif text-center font-semibold text-gray-800 mb-16">
-                    Offres <span className="text-purple-600">{price?.subName}</span>
+                    Offres <span className="text-purple-600">{content?.subName}</span>
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                {price?.prices.map((plan, index) => (
-                    <div key={index} className={`rounded-lg overflow-hidden ${plan.popular ? 'border-2 border-purple-600 relative' : 'border border-gray-200'}`}>
-                    {plan.popular && (
-                        <div className="bg-purple-600 text-white text-center py-2">
-                        Le plus populaire
-                        </div>
-                    )}
+                {content?.prices.map((plan, index) => (
+                    <div key={index} className={`rounded-lg overflow-hidden ${plan?.popular ? 'border-2 border-purple-600 relative' : 'border border-gray-200'}`}>
+                        {plan?.popular && (
+                            <div className="bg-purple-600 text-white text-center py-2">
+                            Le plus populaire
+                            </div>
+                        )}
                     <div className="p-8">
                         <h3 className="text-2xl font-semibold text-gray-800 mb-4">{plan.name}</h3>
                         <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}€</div>
@@ -54,7 +45,7 @@ function Price() {
                 ))}
                 </div>
             </div>
-            </section>
+        </section>
     )
 }
 

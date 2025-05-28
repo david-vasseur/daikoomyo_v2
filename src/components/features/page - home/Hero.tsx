@@ -27,13 +27,13 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fadeIn" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
             <a 
               href="#contact" 
-              className="bg-purple-600 font-semibold hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-colors shadow-lg text-center"
+              className="bg-purple-600 font-semibold hover:bg-purple-700 text-white px-8 py-4 rounded-full transition-colors shadow-lg text-center"
             >
               Prendre RDV
             </a>
             <a 
               href="#services" 
-              className="bg-transparent font-semibold border-2 border-white hover:bg-white/10 text-white px-8 py-3 rounded-full transition-colors shadow-lg text-center"
+              className="bg-transparent font-semibold border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-full transition-colors shadow-lg text-center"
             >
               Decouvrir les Soins
             </a>

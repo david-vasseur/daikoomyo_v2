@@ -1,0 +1,305 @@
+[
+    {
+        "name": "eft",
+        "priceName": "EFT",
+        "subName": "de l'EFT",
+        "subTitle": ["Comprendre le", "tapping EFT"],
+        "image": "https://images.pexels.com/photos/7176302/pexels-photo-7176302.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "alt": "Session de tapping EFT",
+        "infos": [
+            {
+                "title": "Qu'est-ce que l’EFT ?",
+                "value": "L’EFT combine des éléments cognitifs avec le tapping sur des points méridiens spécifiques pour libérer les blocages émotionnels et restaurer le flux énergétique."
+            },
+            {
+                "title": "Le processus",
+                "value": "Nous identifierons des problématiques spécifiques, créerons des phrases adaptées, et utiliserons des séquences de tapping pour traiter les préoccupations émotionnelles et physiques."
+            },
+            {
+                "title": "Bases scientifiques",
+                "value": "Les recherches montrent que l’EFT réduit efficacement les hormones du stress et l’anxiété tout en favorisant la guérison émotionnelle."
+            },
+            {
+                "title": "Autonomisation",
+                "value": "Apprenez des techniques que vous pouvez utiliser chez vous pour maintenir votre équilibre émotionnel et poursuivre votre parcours de guérison."
+            }
+        ],
+        "benefits": [
+            {
+                "icon": "Brain",
+                "title": "Soulagement du stress et de l'anxiété",
+                "description": "Réduisez le stress et l'anxiété grâce à des techniques ciblées de tapping sur les méridiens."
+            },
+            {
+                "icon": "Heart",
+                "title": "Guérison émotionnelle",
+                "description": "Traitez et libérez les traumatismes émotionnels profonds et les schémas négatifs."
+            },
+            {
+                "icon": "Target",
+                "title": "Amélioration des performances",
+                "description": "Surmontez les blocages et améliorez vos performances au travail et dans la vie."
+            },
+            {
+                "icon": "Shield",
+                "title": "Gestion de la douleur",
+                "description": "Agissez sur l'inconfort physique via la connexion corps-esprit."
+            },
+            {
+                "icon": "Sparkles",
+                "title": "Meilleur sommeil",
+                "description": "Calmez les pensées agitées et améliorez naturellement la qualité du sommeil."
+            },
+            {
+                "icon": "Zap",
+                "title": "Équilibre énergétique",
+                "description": "Restaurez l'harmonie dans le système énergétique de votre corps."
+            }
+        ],
+        "options": [
+            "Choisissez un forfait",
+            "Séance unique",
+            "Forfait transformation",
+            "Percée intensive"
+        ],
+        "prices" : [
+            {
+                "name": "Séance unique",
+                "price": 70,
+                "duration": "75 minutes",
+                "features": [
+                    "Évaluation initiale",
+                    "Séquence de tapping personnalisée",
+                    "Techniques à emporter",
+                    "Support par email"
+                ]
+            },
+            {
+                "name": "Forfait transformation",
+                "price": 250,
+                "duration": "4 séances",
+                "popular": true,
+                "features": [
+                    "Évaluation complète",
+                    "Séances hebdomadaires",
+                    "Suivi des progrès",
+                    "Scripts de tapping personnalisés",
+                    "Support prioritaire"
+                ]
+            },
+            {
+                "name": "Percée intensive",
+                "price": 100,
+                "duration": "120 minutes",
+                "features": [
+                    "Session approfondie",
+                    "Résolution de problématiques complexes",
+                    "Matrix Reimprinting",
+                    "Enregistrement personnalisé",
+                    "Suivi de 2 semaines"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "soin-energetique",
+        "priceName" : "Reiki",
+        "subName": "du Reiki",
+        "subTitle": ["À quoi s’attendre lors d’une", "séance de Reiki"],
+        "image": "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "alt": "Séance de Reiki",
+        "infos": [
+            {
+                "title": "Consultation initiale",
+                "value": "Nous discuterons de votre histoire personnelle et de ce que vous espérez retirer de la séance."
+            },
+            {
+                "title": "La séance",
+                "value": "Allongé(e) habillé(e) sur une table de massage confortable, vous recevrez l’énergie de guérison par imposition douce des mains."
+            },
+            {
+                "title": "Durée",
+                "value": "Les séances durent généralement entre 60 et 90 minutes, laissant le temps à l’énergie de circuler et de s’équilibrer."
+            },
+            {
+                "title": "Après la séance",
+                "value": "Vous recevrez des conseils personnalisés pour prolonger les bienfaits de votre séance."
+            }
+        ],
+        "benefits": [
+            {
+                "icon": "Sparkles",
+                "title": "Réduction du stress",
+                "description": "Libérez les tensions et trouvez une profonde détente grâce à la guérison énergétique douce."
+            },
+            {
+                "icon": "Heart",
+                "title": "Guérison émotionnelle",
+                "description": "Traitez et libérez les blocages émotionnels pour un mieux-être global."
+            },
+            {
+                "icon": "Zap",
+                "title": "Équilibre énergétique",
+                "description": "Restaurez l'harmonie dans les systèmes énergétiques naturels de votre corps."
+            },
+            {
+                "icon": "Shield",
+                "title": "Renforcement immunitaire",
+                "description": "Stimulez les capacités naturelles de guérison de votre corps."
+            },
+            {
+                "icon": "Star",
+                "title": "Éveil spirituel",
+                "description": "Approfondissez votre connexion spirituelle et votre conscience intérieure."
+            },
+            {
+                "icon": "Clock",
+                "title": "Sommeil amélioré",
+                "description": "Améliorez la qualité de votre sommeil et retrouvez un rythme naturel réparateur."
+            }
+        ],
+        "options": [
+            "Choisissez un forfait",
+            "Séance unique (60 min)",
+            "Forfait 3 séances",
+            "Guérison profonde (90 min)"
+        ],
+        "prices" : [
+            {
+                "name": "Séance Unique",
+                "price": "60",
+                "duration": "60 minutes",
+                "features": [
+                    "Consultation initiale",
+                    "Soins énergétiques du corps entier",
+                    "Conseils personnalisés après la séance",
+                    "Support par e-mail"
+                ]
+            },
+            {
+                "name": "Forfait 3 Séances",
+                "price": "160",
+                "duration": "60 minutes chacune",
+                "popular": true,
+                "features": [
+                    "Consultation initiale",
+                    "3 séances complètes",
+                    "Suivi de vos progrès",
+                    "Réservation prioritaire",
+                    "Support par e-mail prolongé"
+                ]
+            },
+            {
+                "name": "Guérison Profonde",
+                "price": "100",
+                "duration": "90 minutes",
+                "features": [
+                    "Consultation approfondie",
+                    "Travail énergétique intensif",
+                    "Équilibrage des chakras",
+                    "Thérapie par les cristaux",
+                    "Plan de guérison personnalisé"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "fleurs-de-bach",
+        "priceName": "Fleurs de Bach",
+        "subName": "des fleurs de Bach",
+        "subTitle": ["À quoi s’attendre lors d’une", "consultation de Fleurs de Bach"],
+        "image": "/huiles.jpg",
+        "alt": "Consultation Fleurs de Bach",
+        "infos": [
+            {
+                "title": "Échange personnalisé",
+                "value": "Nous commencerons par une discussion approfondie sur vos ressentis émotionnels, votre état d'esprit et vos préoccupations du moment."
+            },
+            {
+                "title": "Sélection des élixirs",
+                "value": "En fonction de vos besoins, je composerai un mélange personnalisé de Fleurs de Bach pour soutenir votre équilibre émotionnel."
+            },
+            {
+                "title": "Mode de prise",
+                "value": "Je vous expliquerai comment utiliser votre flacon personnalisé au quotidien pour en tirer les meilleurs effets."
+            },
+            {
+                "title": "Suivi et ajustement",
+                "value": "Si nécessaire, un suivi est proposé afin d’adapter le mélange en fonction de l’évolution de votre situation."
+            }
+        ],
+        "benefits": [
+            {
+                "icon": "Leaf",
+                "title": "Équilibre émotionnel",
+                "description": "Apaisez les émotions négatives comme la peur, la colère ou le découragement avec des élixirs floraux naturels."
+            },
+            {
+                "icon": "Heart",
+                "title": "Soutien personnalisé",
+                "description": "Recevez une synergie adaptée à vos besoins émotionnels uniques pour un accompagnement sur mesure."
+            },
+            {
+                "icon": "Brain",
+                "title": "Clarté mentale",
+                "description": "Retrouvez une meilleure concentration et une tranquillité intérieure grâce à un esprit apaisé."
+            },
+            {
+                "icon": "Shield",
+                "title": "Gestion du stress",
+                "description": "Renforcez votre résilience face aux pressions du quotidien en harmonisant vos réactions émotionnelles."
+            },
+            {
+                "icon": "Sun",
+                "title": "Bien-être global",
+                "description": "Favorisez un sentiment général de paix, d’harmonie et d’alignement intérieur."
+            },
+            {
+                "icon": "Sparkles",
+                "title": "Soutien lors de transitions",
+                "description": "Accompagnez les périodes de changement (deuil, séparation, reconversion…) avec plus de sérénité."
+            }
+        ],
+        "options": [
+            "Choisissez un forfait",
+            "Consultation + Flacon personnalisé",
+            "Forfait 3 séances",
+            "Recharge de flacon"
+        ],        
+        "prices": [
+            {
+            "name": "Consultation + Flacon personnalisé",
+            "price": "40",
+            "duration": "45 à 60 minutes",
+            "features": [
+                "Échange personnalisé",
+                "Analyse de l'état émotionnel",
+                "Préparation d’un flacon sur-mesure",
+                "Conseils d'utilisation"
+            ]
+            },
+            {
+            "name": "Forfait 3 séances",
+            "price": "100",
+            "duration": "45 à 60 minutes chacune",
+            "popular": true,
+            "features": [
+                "3 consultations complètes",
+                "Suivi de l’évolution émotionnelle",
+                "Mélanges ajustés à chaque rendez-vous",
+                "Accompagnement personnalisé"
+            ]
+            },
+            {
+            "name": "Recharge de flacon",
+            "price": "15",
+            "duration": "—",
+            "features": [
+                "Préparation d’un nouveau flacon personnalisé",
+                "Sans consultation",
+                "Disponible après une première séance"
+            ]
+            }
+        ]
+    }
+]

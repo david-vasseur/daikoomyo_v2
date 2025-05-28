@@ -1,11 +1,15 @@
-import About from "@/components/About";
-import Blog from "@/components/Blog";
-import Comments from "@/components/Comments";
-import Contact from "@/components/Contact";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import About from "@/components/features/page - home/About";
+import Blog from "@/components/features/page - home/Blog";
+import Comments from "@/components/features/page - home/Comments";
+import Contact from "@/components/features/page - home/Contact";
+import Hero from "@/components/features/page - home/Hero";
+import Services from "@/components/features/page - home/Services";
+import { getLastComments } from "@/lib/pages/comments";
 
-export default function Home() {
+const Page = async () => {
+
+	const comments = await getLastComments();
+
 	return (
 		<>
 			<Hero />
@@ -13,7 +17,9 @@ export default function Home() {
 			<Services />
 			<Contact />
 			<Blog />
-			<Comments />
+			<Comments comments={comments} />
 		</>
 	);
 }
+
+export default Page;

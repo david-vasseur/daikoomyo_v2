@@ -1,10 +1,22 @@
 import React from 'react';
-import FormReservation from '@/components/features/FormReservation';
-import Price from '@/components/features/Price';
-import Benefits from '@/components/features/Benefits';
-import Infos from '@/components/features/Infos';
+import FormReservation from '@/components/features/page - service/FormReservation';
+import Price from '@/components/features/page - service/Price';
+import Benefit from '@/components/features/page - service/Benefit';
+import Infos from '@/components/features/page - service/Infos';
+import { getContentByName } from '@/lib/pages/content';
 
-function App() {
+const Page = async () => {
+
+    const content = await getContentByName("eft");
+
+    if (!content) {
+        return (
+            <div>
+                <h2>Erreur de chargement</h2>
+            </div>
+        )
+    }
+
     return (
         <div className="font-sans">
             <section className="relative min-h-screen flex items-center">
@@ -21,27 +33,27 @@ function App() {
 
                 <div className="container mx-auto px-4 py-20 z-10 text-white">
                     <div className="max-w-3xl">
-                        <h1 className="text-5xl md:text-6xl font-serif font-semibold leading-tight mb-6">
+                        <h1 className="text-5xl md:text-6xl font-serif font-semibold leading-tight mb-6 opacity-0 animate-fadeIn" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                             Transformez votre vie avec le tapping EFT
                         </h1>
-                        <p className="text-xl mb-8 text-purple-100">
+                        <p className="text-xl mb-8 text-purple-100 opacity-0 animate-fadeIn" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                             Libérez les blocages émotionnels, réduisez l&apos;anxiété et atteignez la liberté émotionnelle grâce à la technique de libération émotionnelle (EFT).
                         </p>
                         <a 
                             href="#contact" 
-                            className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full transition-colors shadow-lg text-lg"
+                            className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full transition-colors shadow-lg text-lg opacity-0 animate-fadeIn" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
                             >
                                 Commencez votre parcours de guérison
                         </a>
                     </div>
                 </div>
             </section>
-            <Benefits />
-            <Infos />
-            <Price />
-            <FormReservation />
+            <Benefit content={content} />
+            <Infos content={content} />
+            <Price content={content} />
+            <FormReservation content={content} />
         </div>
     );
 }
 
-export default App;
+export default Page;

@@ -93,7 +93,7 @@ const Blog: React.FC = () => {
         
         <div className="text-center mt-12">
           <a 
-            href="#" 
+            href="/blog" 
             className="inline-block bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-full transition-colors shadow-md"
           >
             Voir tous les articles
