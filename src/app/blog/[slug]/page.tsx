@@ -1,4 +1,5 @@
 import postData from "@/data/postData";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -35,13 +36,13 @@ export default async function Page({ params }: Props) {
           {article.article.map((paragraph, index) => (
             <p key={index} className="text-gray-600 mb-4">{paragraph}</p>
           ))}
-          <a
+          <Link
             href="/blog"
             className="text-purple-600 font-semibold hover:text-purple-700 transition-colors inline-flex items-center"
           >
             <span className="mr-2 transform group-hover:translate-x-1 transition-transform duration-300">←</span>
             Retour
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -74,12 +74,12 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:block">
-            <a 
+            <Link 
               href="/#contact" 
               className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-md border-2 border-purple-800"
             >
               Prendre RDV
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}

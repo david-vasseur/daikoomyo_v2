@@ -69,7 +69,7 @@ function Page() {
                         href={`/blog/`}
                         className="inline-block bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-full transition-colors shadow-md"
                     >
-                        Charger plus d'articles
+                        Charger plus d&apos;articles
                     </a>
                     </div>
                 </div>
