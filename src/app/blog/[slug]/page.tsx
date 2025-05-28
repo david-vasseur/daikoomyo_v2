@@ -5,16 +5,13 @@ interface PageProps {
   params: { slug: string };
 }
 
-const Page = async ({ params }: PageProps) => {
+const Page = ({ params }: PageProps) => {
   const slug = params.slug;
+  const article = postData.find(art => art.slug === slug);
 
-    const article = postData.find(art => art.slug === slug);
-
-    if (!article) {
-      return (
-        <h2>Page non trouvée</h2>
-      )
-    }
+  if (!article) {
+    return <h2>Page non trouvée</h2>;
+  }
 
 	return (
 		<div className="py-20 bg-gray-100 flex items-center justify-center">
