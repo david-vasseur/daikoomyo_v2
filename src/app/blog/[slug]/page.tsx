@@ -1,26 +1,12 @@
 import postData from "@/data/postData";
-import type { Metadata } from "next";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
-
-export async function generateMetadata(
-  { params }: Props
-): Promise<Metadata> {
-  const article = postData.find((art) => art.slug === params.slug);
-
-  return {
-    title: article ? `Daikoomyo | ${article.title}` : "Article introuvable",
-    description: article
-      ? article.article[0]?.slice(0, 160) ?? "Article sans description"
-      : "Cet article est introuvable ou n'existe plus.",
-  };
-}
 
 
 export default async function Page({ params }: Props) {
-  const slug = params.slug;
+  const { slug } = await params;
   const article = postData.find((art) => art.slug === slug);
 
   if (!article) {
