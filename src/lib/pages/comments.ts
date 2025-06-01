@@ -1,9 +1,8 @@
 "use server"
 
-import { PrismaClient } from "@/generated/prisma";
 import type IComment from "@/types/comment";
+import { prisma } from "../prisma/prismaClient";
 
-const prisma = new PrismaClient();
 
 export const getLastComments = async (): Promise<IComment[]> => {
   const lastComments = await prisma.comment.findMany({
@@ -19,13 +18,13 @@ export const getLastComments = async (): Promise<IComment[]> => {
 };
 
 export const getAllComments = async (): Promise<IComment[]> => {
-  const lastComments = await prisma.comment.findMany({
+  const allComments = await prisma.comment.findMany({
     orderBy: { date: "desc" } 
   });
 
-  if (!lastComments) {
+  if (!allComments) {
     throw new Error("Comments not found");
   }
 
-  return lastComments;
+  return allComments;
 };

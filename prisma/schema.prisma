@@ -70,3 +70,16 @@ model Comment {
   rate      Int
   date      DateTime
 }
+
+model Meet {
+  id        String    @id @map("_id") @default(auto()) @db.ObjectId
+  name      String
+  email     String
+  phone     String
+  address    String
+  message   String
+  service   String
+  option    String
+  dateStart DateTime
+  dateEnd   DateTime
+}

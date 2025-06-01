@@ -1,0 +1,13 @@
+.react-datepicker {
+    background-color: blueviolet;
+    border-radius: 15px;
+}
+
+.react-datepicker__time-box {
+    background-color: blueviolet;
+    ;
+}
+
+.react-datepicker__time-container {
+    border-top-right-radius: 15px !important;
+}
