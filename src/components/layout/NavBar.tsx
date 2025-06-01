@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,17 +31,17 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img src={"/daikoomyo.png"} className="h-8 w-8 text-purple-600 rounded-full" />
-            <span className="ml-2 text-xl font-semibold text-gray-800">Daikoomyo</span>
+            <img src={"/new_logo.png"} className="h-8 w-8 rounded-full" />
+            <span className="cursor-default ml-2 text-xl font-semibold text-gray-800" onClick={() => redirect('/auth')}>Daikoomyo</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Acceuil</Link>
+            <Link href="/" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Accueil</Link>
             <Link href="/#about" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">A propos</Link>
-            <li className="list-none text-gray-700 font-semibold hover:text-purple-600 transition-colors group cursor-pointer">
-                <Link href="/#services" className="text-gray-700 font-semibold hover:text-purple-600 transition-colors">Accompagnement & Soins</Link>
-                <ul className={`absolute block pt-[12px] pb-4 text-left h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:h-[180%] group-hover:opacity-100 z-10 rounded-b-lg ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent' }`}>
+            <li className="list-none text-gray-700 font-semibold hover:text-purple-600 transition-colors group cursor-pointer relative">
+                <Link href="/#services" className="inline-block  text-gray-700 font-semibold hover:text-purple-600 transition-colors">Accompagnement & Soins</Link>
+                <ul className={`absolute w-[calc(100%)] block pt-[20px] pb-4 text-left h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:h-[400%] group-hover:opacity-100 z-10 rounded-b-lg ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent' }`}>
                     <li>
                         <Link
                         href="/soin-energetique"
@@ -106,7 +107,7 @@ const Navbar: React.FC = () => {
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            Acceuil
+            Accueil
           </Link>
           <Link 
             href="/#about" 
@@ -120,7 +121,7 @@ const Navbar: React.FC = () => {
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            Soins
+            Accompagnement & Soins
           </Link>
           <Link 
             href="/#avis" 

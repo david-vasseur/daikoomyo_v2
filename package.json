@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.20.2",
     "@google-cloud/storage": "^7.16.0",
     "@prisma/client": "^6.8.2",
     "@tiptap/extension-underline": "^2.12.0",
