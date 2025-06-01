@@ -6,11 +6,11 @@ import Tiptap from './TipTap'
 function NotePicker() {
 
     const [content, setContent] = useState<string>("");
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleContentChange = (reason: any) => {
         setContent(reason);
     };
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleSubmit = (e: any) => {
         e.preventDefault();
         const data= {

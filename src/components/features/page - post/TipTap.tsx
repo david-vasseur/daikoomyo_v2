@@ -4,7 +4,7 @@ import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Toolbar from './Toolbar';
 import Underline from '@tiptap/extension-underline';
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Tiptap = ({ onChange, content }: any) => {
 
 	const handleChange = (newContent: string) => {
