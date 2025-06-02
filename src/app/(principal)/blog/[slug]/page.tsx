@@ -48,6 +48,12 @@ export async function generateMetadata({ params }: Props) {
 }
 
 
+export async function generateStaticParams() {
+  return postData.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default async function Page({ params }: Props) {
 	const { slug } = await params;
 	const article = postData.find((art) => art.slug === slug);
