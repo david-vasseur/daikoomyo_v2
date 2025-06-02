@@ -9,6 +9,7 @@ import IContent from '@/types/page';
 import { setHours, setMinutes } from 'date-fns';
 import { fr } from 'date-fns/locale/fr';
 import { newMeet } from '@/lib/actions/meet.action';
+import { ServiceForm } from '../form/ServiceForm';
 registerLocale('fr', fr)
 
 
@@ -23,29 +24,29 @@ function FormReservation({ content }: { content: IContent }) {
     console.log(meet);
     
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault()
 
-        const form = e.currentTarget;
+    //     const form = e.currentTarget;
 
-        const formData = new FormData(form);
+    //     const formData = new FormData(form);
 
-        const success = await newMeet(formData);
+    //     const success = await newMeet(formData);
         
-        if(success) {
-            const res = await sendEmail(formData);
+    //     if(success) {
+    //         const res = await sendEmail(formData);
 
-            if (res.success) {
-                setStatus('success')
-                e.currentTarget.reset()
-            } else {
-                setStatus('error')
-            }
-        }
+    //         if (res.success) {
+    //             setStatus('success')
+    //             e.currentTarget.reset()
+    //         } else {
+    //             setStatus('error')
+    //         }
+    //     }
         
 
         
-    }
+    // }
 
     return (
         <section id="contact" className="py-20 bg-purple-50">
@@ -54,7 +55,7 @@ function FormReservation({ content }: { content: IContent }) {
                     <h2 className="text-4xl font-serif text-center font-semibold text-gray-800 mb-16">
                         Réservez votre <span className="text-purple-600">Séance</span>
                     </h2>
-                    <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
+                    {/* <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
                         <div className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -181,7 +182,8 @@ function FormReservation({ content }: { content: IContent }) {
                         </div>
                         {status === 'success' && <p className="p-2 rounded-lg bg-green-600">Message envoyé !</p>}
                         {status === 'error' && <p className="p-2 rounded-lg bg-red-600">Une erreur est survenue.</p>}
-                    </form>
+                    </form> */}
+                    <ServiceForm content={content} />
                 </div>
             </div>
         </section>

@@ -3,7 +3,39 @@ import FormReservation from '@/components/features/page - service/FormReservatio
 import Infos from '@/components/features/page - service/Infos';
 import Price from '@/components/features/page - service/Price';
 import { getContentByName } from '@/lib/pages/content';
-import React from 'react'
+import React from 'react';
+
+export const metadata = {
+    title: "Fleurs de Bach à Nîmes - Équilibrez vos émotions avec Daikoomyo",
+    description: "Profitez des bienfaits des Fleurs de Bach à Nîmes pour retrouver harmonie, clarté émotionnelle et sérénité. Accompagnement personnalisé avec Daikoomyo.",
+    openGraph: {
+        title: "Fleurs de Bach à Nîmes - Équilibrez vos émotions avec Daikoomyo",
+        description: "Consultations Fleurs de Bach à Nîmes pour un soutien émotionnel naturel. Retrouvez votre équilibre intérieur avec Daikoomyo.",
+        url: "https://daikoomyo.fr/fleurs-de-bach",
+        siteName: "Daikoomyo",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+        {
+            url: "https://daikoomyo.fr/og-fleurs-de-bach.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Fleurs de Bach à Nîmes - Daikoomyo",
+        },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Fleurs de Bach à Nîmes - Daikoomyo",
+        description: "Soutien émotionnel naturel avec les Fleurs de Bach à Nîmes. Approche douce et personnalisée par Daikoomyo.",
+        images: ["https://daikoomyo.fr/og-fleurs-de-bach.jpg"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+};
+
 
 const Page = async () => {
 

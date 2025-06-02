@@ -1,5 +1,6 @@
 import { getAllMeet } from '@/lib/pages/meet'
 import React from 'react'
+import { BackButton } from '../../components/BackButton';
 
 export const dynamic = "force-dynamic";
 
@@ -16,8 +17,9 @@ const page = async () => {
     }
 
     return (
-    <div className="py-20 bg-pink-200 h-[100vh] flex flex-col gap-10 items-center">
-        <h1 className="text-5xl font-bold">Mon planing:</h1>
+    <div className="py-20 bg-pink-200 min-h-[100vh] flex flex-col gap-10 items-center">
+        <BackButton />
+        <h1 className="text-5xl font-bold mt-20 text-shadow-lg text-shadow-pink-300 border-b-pink-300 border-b-2">Mon planing:</h1>
         <div className="flex flex-col gap-5">
             {meets.map((meet, index) => {
                 return (

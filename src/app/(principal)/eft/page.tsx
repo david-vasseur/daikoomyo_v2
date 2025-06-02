@@ -5,6 +5,38 @@ import Benefit from '@/components/features/page - service/Benefit';
 import Infos from '@/components/features/page - service/Infos';
 import { getContentByName } from '@/lib/pages/content';
 
+export const metadata = {
+    title: "EFT à Nîmes - Libérez vos émotions avec Daikoomyo",
+    description: "Découvrez l’EFT à Nîmes pour apaiser vos émotions, réduire le stress et retrouver l’équilibre émotionnel. Séances personnalisées avec Daikoomyo.",
+    openGraph: {
+        title: "EFT à Nîmes - Libérez vos émotions avec Daikoomyo",
+        description: "Séances d’EFT à Nîmes pour gérer le stress, les émotions et les blocages. Approche douce et personnalisée avec Daikoomyo.",
+        url: "https://daikoomyo.fr/eft",
+        siteName: "Daikoomyo",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+        {
+            url: "https://daikoomyo.fr/og-eft.jpg",
+            width: 1200,
+            height: 630,
+            alt: "EFT à Nîmes - Daikoomyo",
+        },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "EFT à Nîmes - Daikoomyo",
+        description: "Séances d’EFT à Nîmes pour libérer les blocages émotionnels. Approche bienveillante avec Daikoomyo.",
+        images: ["https://daikoomyo.fr/og-eft.jpg"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+};
+
+
 const Page = async () => {
 
     const content = await getContentByName("eft");

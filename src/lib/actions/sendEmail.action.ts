@@ -2,17 +2,18 @@
 
 import nodemailer from 'nodemailer';
 import { randomUUID } from 'crypto';
+import { TServiceSchema } from '../schema';
 
-export async function sendEmail(formData: FormData) {
-	const nom = formData.get('nom');
-	const téléphone = formData.get('téléphone');
-	const address = formData.get('adresse');
-	const email = formData.get('email');
-	const soin = formData.get('soin');
-	const formule = formData.get('formule');
-	const message = formData.get('message');
-	const date_start = formData.get('date_start');
-	const date_end = formData.get('date_end');
+export async function sendEmail(value: TServiceSchema) {
+	const nom = value.fullName;
+	const téléphone = value.phone;
+	const address = value.address;
+	const email = value.email;
+	const soin = value.service;
+	const formule = value.package;
+	const message = value.message;
+	const date_start = value.date_start;
+	const date_end = value.date_end;
 
 	function formatDateToICS(isoDate: string): string {
 		const d = new Date(isoDate);

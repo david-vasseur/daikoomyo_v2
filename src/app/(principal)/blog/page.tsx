@@ -1,6 +1,38 @@
 import React from 'react';
-import postData from '../../data/postData';
+import postData from '../../../data/postData';
 import BlogCard from '@/components/ui/BlogCard';
+
+export const metadata = {
+    title: "Blog bien-être et soins énergétiques - Daikoomyo",
+    description: "Explorez nos articles sur le bien-être, les soins énergétiques, l’EFT, les Fleurs de Bach et plus encore. Informations, conseils et inspiration par Daikoomyo.",
+    openGraph: {
+        title: "Blog bien-être et soins énergétiques - Daikoomyo",
+        description: "Articles sur l’énergétique, les émotions, la pleine conscience et les pratiques naturelles. Le blog de Daikoomyo à Nîmes.",
+        url: "https://daikoomyo.fr/blog",
+        siteName: "Daikoomyo",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+        {
+            url: "https://daikoomyo.fr/og-blog.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Blog bien-être et soins énergétiques - Daikoomyo",
+        },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Blog bien-être - Daikoomyo",
+        description: "Inspiration et ressources autour du bien-être, de l’énergétique et des émotions. Le blog Daikoomyo.",
+        images: ["https://daikoomyo.fr/og-blog.jpg"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+};
+
 
 function Page() {
 

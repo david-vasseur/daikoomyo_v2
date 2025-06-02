@@ -32,7 +32,7 @@ const About: React.FC = () => {
             <h4 className="text-xl font-bold text-purple-600 mb-6">Energeticienne</h4>
             
             <p className="text-gray-600 mb-6 leading-relaxed font-semibold text-justify">
-              Depuis plus de 20 ans, je me consacre aux médecines douces et au bien-être. Mon parcours a commencé dans l&apos;horticulture et le médico-social, avant de s&apos;orienter vers le soin énergétique et l&apos;accompagnement spirituel après avoir découvert un don naturel pour soigner avec mes mains.
+              Depuis plus de 20 ans, je me consacre aux médecines douces et au bien-être. Mon parcours a commencé dans l&apos;horticulture et le médico-social, avant de m&apos;orienter vers le soin énergétique et l&apos;accompagnement spirituel après avoir découvert un don naturel pour soigner avec mes mains.
             </p>
             
             <p className="text-gray-600 mb-6 leading-relaxed font-semibold text-justify">

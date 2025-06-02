@@ -1,3 +1,4 @@
+import { HomeForm } from "@/components/features/form/HomeForm";
 import About from "@/components/features/page - home/About";
 import Blog from "@/components/features/page - home/Blog";
 import Comments from "@/components/features/page - home/Comments";

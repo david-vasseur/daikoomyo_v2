@@ -1,5 +1,12 @@
+import { BackButton } from "../../components/BackButton";
+
 export default function Page() {
-  return <div>Page désactivée temporairement</div>;
+    return (
+		<div className="py-20 bg-pink-200 min-h-[100vh] flex flex-col gap-10 items-center">
+			<BackButton />
+			<h1 className="text-5xl font-bold mt-20 text-shadow-lg text-shadow-pink-300 border-b-pink-300 border-b-2">Creer un article</h1>
+		</div>
+    )
 }
 
 // "use client"

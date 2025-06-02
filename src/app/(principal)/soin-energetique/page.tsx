@@ -5,6 +5,38 @@ import Benefit from '@/components/features/page - service/Benefit';
 import Infos from '@/components/features/page - service/Infos';
 import { getContentByName } from '@/lib/pages/content';
 
+export const metadata = {
+    title: "Soin énergétique à Nîmes - Daikoomyo",
+    description: "Retrouvez équilibre et sérénité grâce aux soins énergétiques proposés à Nîmes et ses alentours. Séances personnalisées avec Daikoomyo.",
+    openGraph: {
+        title: "Soin énergétique à Nîmes - Daikoomyo",
+        description: "Séances de soin énergétique à Nîmes. Harmonisez vos énergies et améliorez votre bien-être avec Daikoomyo.",
+        url: "https://daikoomyo.fr/soin-energetique",
+        siteName: "Daikoomyo",
+        locale: "fr_FR",
+        type: "website",
+        images: [
+        {
+            url: "https://daikoomyo.fr/og-soin-energetique.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Soin énergétique à Nîmes - Daikoomyo",
+        },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Soin énergétique à Nîmes - Daikoomyo",
+        description: "Séances de soin énergétique à Nîmes avec Daikoomyo.",
+        images: ["https://daikoomyo.fr/og-soin-energetique.jpg"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+};
+
+
 const Page = async () => {
 
     const content = await getContentByName("soin-energetique");

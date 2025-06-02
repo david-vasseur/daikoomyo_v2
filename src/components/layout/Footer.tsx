@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -7,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center mb-4">
-              <img src={"/daikoomyo.png"} className="h-8 w-8 text-purple-600 rounded-full" />
+              <img src={"/new_logo.png"} className="h-8 w-8 text-purple-600 rounded-full" />
               <span className="ml-2 text-xl font-semibold">Daikoomyo</span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -29,68 +30,43 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Menu rapide</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-purple-400 transition-colors">Acceuil</a>
+                <Link href="/#home" className="text-gray-400 hover:text-purple-400 transition-colors">Acceuil</Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">A propos</a>
+                <Link href="/#about" className="text-gray-400 hover:text-purple-400 transition-colors">A propos</Link>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">Soins</a>
+                <Link href="/#services" className="text-gray-400 hover:text-purple-400 transition-colors">Soins</Link>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-purple-400 transition-colors">Avis</a>
+                <Link href="/#testimonials" className="text-gray-400 hover:text-purple-400 transition-colors">Avis</Link>
               </li>
               <li>
-                <a href="#blog" className="text-gray-400 hover:text-purple-400 transition-colors">Blog</a>
+                <Link href="/#blog" className="text-gray-400 hover:text-purple-400 transition-colors">Blog</Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-purple-400 transition-colors">Contact</a>
+                <Link href="/#contact" className="text-gray-400 hover:text-purple-400 transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Soins</h3>
+            <h3 className="text-lg font-semibold mb-4">Accompagnements & Soins</h3>
                 <ul className="space-y-2">
                     <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        <Link href="/eft" className="text-gray-400 hover:text-purple-400 transition-colors">
                         Emotional Freedom Technique
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Gestion du stress avec l&apos;EFT
-                        </a>
+                        <Link href="/soin-energetique" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        Soin energetique
+                        </Link>
                     </li>
                     <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Fleurs de Bach Harmonie émotionnelle
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Fleurs de Bach personnalisées
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Reiki Énergie de guérison
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Reiki pour l&apos;alignement spirituel
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Massage holistique
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" className="text-gray-400 hover:text-purple-400 transition-colors">
-                        Massage pour réalignement énergétique
-                        </a>
+                        <Link href="/fleurs-de-bach" className="text-gray-400 hover:text-purple-400 transition-colors">
+                        Fleurs de Bach
+                        </Link>
                     </li>
                 </ul>
           </div>

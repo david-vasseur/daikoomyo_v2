@@ -1,18 +1,19 @@
 "use server"
 
 import { prisma } from "../prisma/prismaClient";
+import { TServiceSchema } from "../schema";
 
-export const newMeet = async (formData: FormData) => {
+export const newMeet = async (value: TServiceSchema) => {
 
-    const nom = formData.get('nom');
-	const téléphone = formData.get('téléphone');
-	const email = formData.get('email');
-    const address = formData.get('adresse');
-	const soin = formData.get('soin');
-	const formule = formData.get('formule');
-	const message = formData.get('message');
-	const date_start = formData.get('date_start');
-	const date_end = formData.get('date_end');
+    const nom = value.fullName;
+	const téléphone = value.phone;
+	const email = value.email;
+    const address = value.address;
+	const soin = value.service;
+	const formule = value.package;
+	const message = value.message;
+	const date_start = value.date_start;
+	const date_end = value.date_end;
 
     try {
         if (nom !== null && téléphone !== null && email !== null && address !== null && soin !== null && formule !== null && message !== null && date_start !== null && date_end !== null) {
