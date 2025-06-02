@@ -266,6 +266,7 @@ export const ServiceForm = ({ content }: { content: IContent }) => {
         </div>
             <form.Subscribe 
                 selector={(state) => [state.canSubmit, state.isSubmitting]}
+                // eslint-disable-next-line react/no-children-prop
                 children={([canSubmit, isSubmitting]) => (
                     <button 
                         type="submit" 
