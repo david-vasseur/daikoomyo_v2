@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,11 +116,25 @@ const Navbar: React.FC = () => {
             A propos
           </Link>
           <Link 
-            href="/#services" 
+            href="/eft" 
             className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            Accompagnement & Soins
+            EFT
+          </Link>
+          <Link 
+            href="/soin-energetique" 
+            className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Soin énergetique
+          </Link>
+          <Link 
+            href="/fleurs-de-bach" 
+            className="block py-2 text-gray-700 hover:text-purple-600 transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Fleurs de Bach
           </Link>
           <Link 
             href="/#avis" 
