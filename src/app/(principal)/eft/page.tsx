@@ -11,13 +11,13 @@ export const metadata = {
     openGraph: {
         title: "EFT à Nîmes - Libérez vos émotions avec Daikoomyo",
         description: "Séances d’EFT à Nîmes pour gérer le stress, les émotions et les blocages. Approche douce et personnalisée avec Daikoomyo.",
-        url: "https://daikoomyo.fr/eft",
+        url: "https://www.daikoomyo.fr/eft",
         siteName: "Daikoomyo",
         locale: "fr_FR",
         type: "website",
         images: [
         {
-            url: "https://daikoomyo.fr/og-eft.jpg",
+            url: "https://www.daikoomyo.fr/new_logo.webp",
             width: 1200,
             height: 630,
             alt: "EFT à Nîmes - Daikoomyo",
@@ -28,7 +28,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "EFT à Nîmes - Daikoomyo",
         description: "Séances d’EFT à Nîmes pour libérer les blocages émotionnels. Approche bienveillante avec Daikoomyo.",
-        images: ["https://daikoomyo.fr/og-eft.jpg"],
+        images: ["https://www.daikoomyo.fr/new_logo.webp"],
     },
     robots: {
         index: true,
@@ -75,7 +75,7 @@ const Page = async () => {
                             href="#contact" 
                             className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full transition-colors shadow-lg text-lg opacity-0 animate-fadeIn" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
                             >
-                                Commencez votre parcours de guérison
+                                Prendre RDV
                         </a>
                     </div>
                 </div>

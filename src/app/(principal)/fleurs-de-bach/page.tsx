@@ -11,13 +11,13 @@ export const metadata = {
     openGraph: {
         title: "Fleurs de Bach à Nîmes - Équilibrez vos émotions avec Daikoomyo",
         description: "Consultations Fleurs de Bach à Nîmes pour un soutien émotionnel naturel. Retrouvez votre équilibre intérieur avec Daikoomyo.",
-        url: "https://daikoomyo.fr/fleurs-de-bach",
+        url: "https://www.daikoomyo.fr/fleurs-de-bach",
         siteName: "Daikoomyo",
         locale: "fr_FR",
         type: "website",
         images: [
         {
-            url: "https://daikoomyo.fr/og-fleurs-de-bach.jpg",
+            url: "https://www.daikoomyo.fr/new_logo.webp",
             width: 1200,
             height: 630,
             alt: "Fleurs de Bach à Nîmes - Daikoomyo",
@@ -28,7 +28,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Fleurs de Bach à Nîmes - Daikoomyo",
         description: "Soutien émotionnel naturel avec les Fleurs de Bach à Nîmes. Approche douce et personnalisée par Daikoomyo.",
-        images: ["https://daikoomyo.fr/og-fleurs-de-bach.jpg"],
+        images: ["https://www.daikoomyo.fr/new_logo.webp"],
     },
     robots: {
         index: true,
@@ -75,7 +75,7 @@ const Page = async () => {
                             href="#contact" 
                             className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full transition-colors shadow-lg text-lg opacity-0 animate-fadeIn" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}
                         >
-                            Commencer mon accompagnement
+                            Prendre RDV
                         </a>
                     </div>
                 </div>

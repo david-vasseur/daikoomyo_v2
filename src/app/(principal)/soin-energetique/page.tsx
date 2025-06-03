@@ -11,13 +11,13 @@ export const metadata = {
     openGraph: {
         title: "Soin énergétique à Nîmes - Daikoomyo",
         description: "Séances de soin énergétique à Nîmes. Harmonisez vos énergies et améliorez votre bien-être avec Daikoomyo.",
-        url: "https://daikoomyo.fr/soin-energetique",
+        url: "https://www.daikoomyo.fr/soin-energetique",
         siteName: "Daikoomyo",
         locale: "fr_FR",
         type: "website",
         images: [
         {
-            url: "https://daikoomyo.fr/og-soin-energetique.jpg",
+            url: "https://www.daikoomyo.fr/new_logo.webp",
             width: 1200,
             height: 630,
             alt: "Soin énergétique à Nîmes - Daikoomyo",
@@ -28,7 +28,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Soin énergétique à Nîmes - Daikoomyo",
         description: "Séances de soin énergétique à Nîmes avec Daikoomyo.",
-        images: ["https://daikoomyo.fr/og-soin-energetique.jpg"],
+        images: ["https://www.daikoomyo.fr/new_logo.webp"],
     },
     robots: {
         index: true,

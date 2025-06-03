@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img src={"/new_logo.png"} className="h-8 w-8 rounded-full" />
-            <span className="cursor-default ml-2 text-xl font-semibold text-gray-800" onClick={() => redirect('/auth')}>Daikoomyo</span>
+            <span className="cursor-default ml-2 text-xl font-semibold text-gray-800">Daikoomyo</span>
           </div>
 
           {/* Desktop Navigation */}

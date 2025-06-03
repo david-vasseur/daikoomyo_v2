@@ -6,10 +6,10 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
-            A propos de <span className="text-purple-600">Moi</span>
+            Mon <span className="text-purple-600">histoire</span>
           </h2>
           <div className="w-16 h-1 bg-purple-600 mx-auto mb-6"></div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-semibold">
             Découvrez l&apos;histoire et la philosophie qui inspirent ma pratique spirituelle
           </p>
         </div>
@@ -45,15 +45,15 @@ const About: React.FC = () => {
             
             <div className="flex gap-4">
               <div className="text-center">
-                <p className="text-3xl font-bold text-purple-600">200+</p>
+                <p className="text-2xl font-bold text-purple-600">200+</p>
                 <p className="text-gray-600 font-semibold">Seances</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-purple-600">5+</p>
+                <p className="text-2xl font-bold text-purple-600">5+</p>
                 <p className="text-gray-600 font-semibold">Expériences</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-purple-600">4</p>
+                <p className="text-2xl font-bold text-purple-600">4</p>
                 <p className="text-gray-600 font-semibold">Certifications</p>
               </div>
             </div>

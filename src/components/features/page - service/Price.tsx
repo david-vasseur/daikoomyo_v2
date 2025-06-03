@@ -7,7 +7,7 @@ function Price({ content }: { content: IContent}) {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-serif text-center font-semibold text-gray-800 mb-16">
-                    Offres <span className="text-purple-600">{content?.subName}</span>
+                    Formules d’accompagnement <span className="text-purple-600">{content?.subName}</span>
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

@@ -74,7 +74,7 @@ const Blog: React.FC = () => {
             Mon <span className="text-purple-600">Blog</span>
           </h2>
           <div className="w-16 h-1 bg-purple-600 mx-auto mb-6"></div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-semibold">
             Sagesse et conseils issus de mon blog pour accompagner votre cheminement spirituel
           </p>
         </div>

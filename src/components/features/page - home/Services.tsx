@@ -32,8 +32,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, hre
 const Services: React.FC = () => {
   const services = [
   {
-    title: "Emotional Freedom Technique",
-    description: "Libérez les blocages émotionnels grâce à des séances d’EFT, une méthode douce de tapping pour retrouver équilibre et sérénité intérieure.",
+    title: "Gestion des douleurs physiques avec l’EFT",
+    description: "Apaisez les douleurs physiques avec l’EFT en libérant les tensions émotionnelles et en rééquilibrant l’énergie du corps.",
     icon: <Zap className="h-8 w-8" />,
     href: "/eft"
   },
@@ -87,10 +87,10 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
-            Mes <span className="text-purple-400">Prestations</span>
+            Pratiques et <span className="text-purple-600">approches</span>
           </h2>
           <div className="w-16 h-1 bg-purple-600 mx-auto mb-6"></div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 font-semibold">
             Prestations holistiques pour accompagner votre cheminement spirituel et votre transformation personnelle
           </p>
         </div>

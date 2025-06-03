@@ -37,11 +37,11 @@ const Comments = ({ comments }: { comments: IComment[] }) => {
 			<div className="container mx-auto px-4">
 				<div className="max-w-3xl mx-auto text-center mb-16">
 					<h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
-						Mes <span className="text-purple-600">Avis client</span>
+						Vos <span className="text-purple-600">retours</span>
 					</h2>
 					<div className="w-16 h-1 bg-purple-600 mx-auto mb-6"></div>
-					<p className="text-gray-600">
-						Voici les témoignages de ceux qui ont vécu une transformation grâce à notre travail
+					<p className="text-gray-600 font-semibold">
+						Ils partagent leur expérience de ce chemin parcouru ensemble...
 					</p>
 				</div>
 				
