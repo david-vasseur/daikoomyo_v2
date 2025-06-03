@@ -1,0 +1,9 @@
+.react-datepicker__header {
+  height: 50px !important;
+  background-color: #9510F5;
+}
+
+.react-datepicker__month-container {
+    background-color: #C4B3FF !important;
+    font-weight: bolder !important;
+}

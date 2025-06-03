@@ -8,6 +8,7 @@ import { setHours, setMinutes } from 'date-fns';
 import { newMeet } from '@/lib/actions/meet.action';
 import { sendEmail } from '@/lib/actions/sendEmail.action';
 import dateEnd from '@/hooks/date-end';
+import "./form.css";
 
 
 export const ServiceForm = ({ content }: { content: IContent }) => {
@@ -223,6 +224,8 @@ export const ServiceForm = ({ content }: { content: IContent }) => {
                             : setHours(setMinutes(new Date(), 0), 9)
                         }
                         maxTime={setHours(setMinutes(new Date(), 30), 19)}
+                        calendarClassName="bg-violet-200 shadow-xl border border-gray-200 rounded-2xl overflow-hidden"
+                        timeClassName={() => "bg-violet-100"}
                         filterDate={(date) => date.getDay() !== 0}
                         disabled={!form.state.values.package}
                     />

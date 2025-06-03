@@ -75,3 +75,8 @@
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+.react-datepicker__header {
+  height: 50px !important;
+  background-color: #34556f;
+}
