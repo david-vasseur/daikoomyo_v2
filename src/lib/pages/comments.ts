@@ -2,6 +2,17 @@
 
 import type IComment from "@/types/comment";
 
+interface GoogleReview {
+  author_name: string;
+  author_url: string;
+  profile_photo_url: string;
+  rating: number;
+  text: string;
+  time: number;
+  relative_time_description: string;
+}
+
+
 export const getLastComments = async (): Promise<IComment[]> => {
   try {
     const res = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${process.env.GOOGLE_BUSINESS_ID}&fields=reviews&key=${process.env.GOOGLE_API}`);
@@ -18,7 +29,7 @@ export const getLastComments = async (): Promise<IComment[]> => {
       return [];
     }
 
-    const comments: IComment[] = data.result.reviews.map((review: any) => ({
+    const comments: IComment[] = data.result.reviews.map((review: GoogleReview) => ({
       id: review.author_url + review.time,
       name: review.author_name,
       message: review.text,
