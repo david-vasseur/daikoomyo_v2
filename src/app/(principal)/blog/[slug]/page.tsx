@@ -1,4 +1,5 @@
-import postData from "@/data/postData";
+import PostReader from "@/components/features/post editor/PostReader";
+import { getPostbySlug } from "@/lib/pages/blog";
 import Link from "next/link";
 
 type Props = {
@@ -9,7 +10,7 @@ export async function generateMetadata({ params }: Props) {
 
 	const { slug } = await params;
 
-	const post = postData.find((art) => art.slug === slug); 
+	const post = await getPostbySlug(slug); 
 
 	if (!post) {
 		return null;
@@ -47,19 +48,13 @@ export async function generateMetadata({ params }: Props) {
 	};
 }
 
-
-export async function generateStaticParams() {
-  return postData.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
 export default async function Page({ params }: Props) {
 	const { slug } = await params;
-	const article = postData.find((art) => art.slug === slug);
+
+	const article = await getPostbySlug(slug);	
 
 	if (!article) {
-		return <h2 className="text-center text-xl mt-20">Page non trouvée</h2>;
+		return <h2 className="text-center text-xl mt-20">L'article n'existe pas</h2>;
 	}
 
 	return (
@@ -77,16 +72,14 @@ export default async function Page({ params }: Props) {
 				</div>
 
 				<div className="p-6 h-full flex flex-col justify-between">
-					<p className="text-gray-500 text-sm mb-2">{article.date}</p>
-					<h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+					<p className="text-gray-500 text-sm mb-2">{article.date.toLocaleDateString()}</p>
+					<h3 className="text-3xl font-semibold rounded-lg text-gray-800 p-4 bg-purple-400 my-10 text-center group-hover:text-purple-600 group-hover:bg-transparent transition-colors">
 						{article.title}
 					</h3>
-					{article.article.map((paragraph, index) => (
-						<p key={index} className="text-gray-600 mb-4">{paragraph}</p>
-					))}
+					<PostReader jsonContent={article.article} />
 					<Link
 						href="/blog"
-						className="text-purple-600 font-semibold hover:text-purple-700 transition-colors inline-flex items-center"
+						className="mt-10 text-purple-600 font-semibold hover:text-purple-700 transition-colors inline-flex items-center"
 					>
 						<span className="mr-2 transform group-hover:translate-x-1 transition-transform duration-300">←</span>
 						Retour

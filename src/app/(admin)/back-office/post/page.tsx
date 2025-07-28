@@ -1,10 +1,28 @@
+"use client"
+
+import PostEditor from "@/components/features/post editor/PostEditor";
 import { BackButton } from "../../components/BackButton";
+import { createPost } from "./post.action";
+import { useState } from "react";
 
 export default function Page() {
+
+	const [stringArticle, setStringArticle] = useState("")
+
     return (
-		<div className="py-20 bg-pink-200 min-h-[100vh] flex flex-col gap-10 items-center">
+		<div className="py-20 bg-pink-100 min-h-[100vh] flex flex-col gap-10 items-center">
 			<BackButton />
 			<h1 className="text-5xl font-bold mt-20 text-shadow-lg text-shadow-pink-300 border-b-pink-300 border-b-2">Creer un article</h1>
+			<form action={createPost} className="flex flex-col gap-10 items-center">
+				<input type="text" name="title" className="px-3 py-1.5 shadow-gray-800 shadow-md rounded-lg border-gray-400 border-2" placeholder="Titre" />
+				<input type="text" name="slug" className="px-3 py-1.5 shadow-gray-800 shadow-md rounded-lg border-gray-400 border-2" placeholder="Slug" />
+				<input type="text" name="category" className="px-3 py-1.5 shadow-gray-800 shadow-md rounded-lg border-gray-400 border-2" placeholder="Catégorie" />
+				<input type="text" name="image" className="px-3 py-1.5 shadow-gray-800 shadow-md rounded-lg border-gray-400 border-2" placeholder="Image de la card" />
+				<input type="text" name="excerpt" className="px-3 py-1.5 shadow-gray-800 shadow-md rounded-lg border-gray-400 border-2" placeholder="Résumé" />
+				<input type='hidden' name="article" value={stringArticle} />
+				<PostEditor onUpdate={(post) => setStringArticle(JSON.stringify(post))} />
+				<button type="submit" className="rounded-lg bg-gray-700 text-white font-bold px-2 py-1 cursor-pointer border-1 border-gray-400 shadow-gray-800 shadow-md">Valider</button>
+			</form>	
 		</div>
     )
 }

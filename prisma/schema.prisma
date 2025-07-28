@@ -20,7 +20,7 @@ model Post {
   title     String
   slug      String   @unique
   excerpt   String
-  article   String[]
+  article   Json
   date      DateTime
   image     String
   category  String

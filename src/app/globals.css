@@ -80,3 +80,16 @@
   height: 50px !important;
   background-color: #34556f;
 }
+
+.cookie-animation {
+    animation: cookie-start .2s ease-in-out;
+}
+
+@keyframes cookie-start {
+    from {
+      transform: translateY(23vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+}

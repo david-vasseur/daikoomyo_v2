@@ -1,6 +1,7 @@
 import React from 'react';
 import postData from '../../../data/postData';
 import BlogCard from '@/components/ui/BlogCard';
+import { getPost } from '@/lib/pages/blog';
 
 export const metadata = {
     title: "Blog bien-être et soins énergétiques - Daikoomyo",
@@ -34,13 +35,14 @@ export const metadata = {
 };
 
 
-function Page() {
+async function Page()  {
 
-    const blogPosts = postData;
+    // const blogPosts = postData;
+    const blogPosts = await getPost();
 
     return (
-        <div className="flex gap-5 text-gray-800">
-            <section id="side" className="py-20 w-1/5 bg-gradient-to-r from-gray-900/5 to-gray-200/60 shadow-xl">
+        <div className="text-gray-800">
+            {/* <section id="side" className="py-20 w-1/5 bg-gradient-to-r from-gray-900/5 to-gray-200/60 shadow-xl">
                 <label
                 className="fixed left-5 top-30 shadow-lg flex items-center px-4 py-2 rounded-lg border border-gray-200 hover:border-purple-500 cursor-pointer transition-colors"
                 >
@@ -69,8 +71,8 @@ function Page() {
                 <span className="text-sm font-semibold">Tirage</span>
                 </label>
         
-            </section>
-            <section id="blog" className="py-40 pr-5 bg-white">
+            </section> */}
+            <section id="blog" className="py-40 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-4">
@@ -83,7 +85,7 @@ function Page() {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {blogPosts.map((post, index) => (
+                    {blogPosts.length > 1 ? blogPosts.map((post, index) => (
                         <BlogCard 
                             key={index}
                             title={post.title}
@@ -93,7 +95,11 @@ function Page() {
                             category={post.category}
                             slug={post.slug}
                         />
-                    ))}
+                    ))
+                    : (
+                        <p>Pas de posts encore</p>
+                    )
+                }
                     </div>
                     
                     <div className="text-center mt-12">

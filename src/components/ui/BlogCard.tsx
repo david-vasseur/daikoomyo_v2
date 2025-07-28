@@ -3,7 +3,7 @@ import React from 'react';
 interface IBlogCard {
   title: string;
   excerpt: string;
-  date: string;
+  date: Date;
   image: string;
   category: string;
   slug:string;
@@ -24,7 +24,7 @@ function BlogCard({ title, excerpt, date, image, category, slug }: IBlogCard) {
             </div>
             
             <div className="p-6 h-full flex flex-col justify-between">
-                <p className="text-gray-500 text-sm mb-2">{date}</p>
+                <p className="text-gray-500 text-sm mb-2">{date.toLocaleDateString()}</p>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
                 {title}
                 </h3>
@@ -41,4 +41,4 @@ function BlogCard({ title, excerpt, date, image, category, slug }: IBlogCard) {
     )
 }
 
-export default BlogCard
+export default BlogCard;

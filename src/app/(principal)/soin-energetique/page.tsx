@@ -4,10 +4,11 @@ import Price from '@/components/features/page - service/Price';
 import Benefit from '@/components/features/page - service/Benefit';
 import Infos from '@/components/features/page - service/Infos';
 import { getContentByName } from '@/lib/pages/content';
+import Script from 'next/script';
 
 export const metadata = {
     title: "Soin énergétique à Nîmes - Daikoomyo",
-    description: "Retrouvez équilibre et sérénité grâce aux soins énergétiques proposés à Nîmes et ses alentours. Séances personnalisées avec Daikoomyo.",
+    description: "Retrouvez équilibre et sérénité grâce au soin énergétique à Nîmes proposé par Daikoomyo. Séances personnalisées pour votre bien-être.",
     openGraph: {
         title: "Soin énergétique à Nîmes - Daikoomyo",
         description: "Séances de soin énergétique à Nîmes. Harmonisez vos énergies et améliorez votre bien-être avec Daikoomyo.",
@@ -16,12 +17,12 @@ export const metadata = {
         locale: "fr_FR",
         type: "website",
         images: [
-        {
-            url: "https://www.daikoomyo.fr/new_logo.webp",
-            width: 1200,
-            height: 630,
-            alt: "Soin énergétique à Nîmes - Daikoomyo",
-        },
+            {
+                url: "https://www.daikoomyo.fr/new_logo.webp",
+                width: 1200,
+                height: 630,
+                alt: "Soin énergétique à Nîmes - Daikoomyo",
+            },
         ],
     },
     twitter: {
@@ -35,6 +36,7 @@ export const metadata = {
         follow: true,
     },
 };
+
 
 
 const Page = async () => {
@@ -84,6 +86,26 @@ const Page = async () => {
             <Infos content={content} />
             <Price content={content} />
             <FormReservation content={content} />
+            {/* Balise JSON-LD SEO */}
+            <Script
+                type="application/ld+json"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        "name": "Daikoomyo",
+                        "image": "https://www.daikoomyo.fr/new_logo.webp",
+                        "description": "Séances de soin énergétique à Nîmes",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Nîmes",
+                            "addressCountry": "FR"
+                        },
+                        "url": "https://www.daikoomyo.fr/soin-energetique"
+                    }),
+                }}
+            />
         </div>
     );
 }
