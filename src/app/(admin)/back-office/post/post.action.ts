@@ -19,6 +19,7 @@ export const createPost = async ( formData : FormData ) => {
     try {
         article = JSON.parse(articleString);
     } catch (error) {
+        console.error(error);
         throw new Error('erreur dans le fichier article');
     }
 

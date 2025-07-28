@@ -1,6 +1,6 @@
 "use client";
 
-import { AlignCenter, AlignJustify, AlignLeft, AlignRight, BoldIcon, Heading1, Heading2, Heading3, Highlighter, Image, ItalicIcon, Strikethrough, UnderlineIcon } from 'lucide-react';
+import { AlignCenter, AlignJustify, AlignLeft, AlignRight, BoldIcon, Heading1, Heading2, Heading3, Image, ItalicIcon, Strikethrough, UnderlineIcon } from 'lucide-react';
 import React from 'react';
 import { Editor } from '@tiptap/react';
 

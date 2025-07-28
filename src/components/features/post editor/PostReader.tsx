@@ -9,6 +9,7 @@ import React from 'react';
 
 import "./PostEditor.css";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function PostReader({ jsonContent }: { jsonContent: Record<string, any> }) {
 
     const reader = useEditor({

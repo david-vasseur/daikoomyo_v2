@@ -1,5 +1,4 @@
 import React from 'react';
-import postData from '../../../data/postData';
 import BlogCard from '@/components/ui/BlogCard';
 import { getPost } from '@/lib/pages/blog';
 

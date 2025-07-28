@@ -1,19 +1,19 @@
 "use client"
 
-import { EditorContent, generateJSON, useEditor } from '@tiptap/react';
+import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import React, { useState } from 'react';
+import React from 'react';
 import PostMenuBar from './PostMenuBar';
 import Underline from '@tiptap/extension-underline';
 import TextAlign from '@tiptap/extension-text-align';
 import FileHandler from '@tiptap/extension-file-handler';
 import Image from '@tiptap/extension-image';
 import BubbleMenuExtension from '@tiptap/extension-bubble-menu';
-import ImageBubbleMenu from "./ImageBubbleMenu";
 
 import "./PostEditor.css";
 
-function PostEditor({ onUpdate }: { onUpdate: (json: any) => void }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function PostEditor({ onUpdate }: { onUpdate: (json: Record<string, any>) => void }) {
 
 	const editor = useEditor({
 		extensions: [

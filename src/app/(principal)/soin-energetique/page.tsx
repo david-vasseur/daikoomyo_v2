@@ -88,6 +88,7 @@ const Page = async () => {
             <FormReservation content={content} />
             {/* Balise JSON-LD SEO */}
             <Script
+                id="structured-data-localbusiness"
                 type="application/ld+json"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{

@@ -54,7 +54,7 @@ export default async function Page({ params }: Props) {
 	const article = await getPostbySlug(slug);	
 
 	if (!article) {
-		return <h2 className="text-center text-xl mt-20">L'article n'existe pas</h2>;
+		return <h2 className="text-center text-xl mt-20">L&apos;article n&apos;existe pas</h2>;
 	}
 
 	return (
