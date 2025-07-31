@@ -23,7 +23,7 @@ export const newUser = async ({ email }: { email: string } ) => {
                     date: new Date()
                 }
             })
-            const message = "Email enegistré en newsletter";
+            const message = "Email enegistré avec succès";
             return { success: true, message };
         }
 

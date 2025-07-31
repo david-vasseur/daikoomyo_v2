@@ -3,6 +3,7 @@
 import { useForm } from '@tanstack/react-form';
 import { sendContactEmail } from '@/lib/actions/sendContactEmail.action';
 import { homeSchema, THomeSchema } from '@/lib/schema';
+import { useModalStore } from '@/lib/stores/modalStore';
 
 
 export const HomeForm = () => {
@@ -20,7 +21,10 @@ export const HomeForm = () => {
         onSubmit: async ({ value }) => {
             const result = await sendContactEmail(value);
             if (result) {
+                useModalStore.getState().openModal("Votre demande de rendez-vous a bien été prise en compte");
                 form.reset();
+            } else {
+                useModalStore.getState().openModal("Echec de l'envoie, une erreur est survenue");
             }
         }
     })

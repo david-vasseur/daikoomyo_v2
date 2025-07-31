@@ -16,10 +16,7 @@ function NotePicker() {
         const data= {
             id: 123,
             content: content
-        }
-
-        console.log(data);
-        
+        } 
     }
 
   return (

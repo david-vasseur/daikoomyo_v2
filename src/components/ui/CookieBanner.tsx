@@ -7,9 +7,6 @@ function CookieBanner() {
 
     const [open, setOpen] = useState(false);
     const [hasMounted, setHasMounted] = useState(false);
-    console.log(open);
-    console.log(hasMounted);
-    
 
     useEffect(() => {
         if (typeof window !== "undefined") {

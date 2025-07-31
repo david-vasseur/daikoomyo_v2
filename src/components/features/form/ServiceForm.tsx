@@ -9,6 +9,7 @@ import { newMeet } from '@/lib/actions/meet.action';
 import { sendEmail } from '@/lib/actions/sendEmail.action';
 import dateEnd from '@/hooks/date-end';
 import "./form.css";
+import { useModalStore } from '@/lib/stores/modalStore';
 
 
 export const ServiceForm = ({ content }: { content: IContent }) => {
@@ -32,12 +33,13 @@ export const ServiceForm = ({ content }: { content: IContent }) => {
             
             if(success) {
                 const res = await sendEmail(value);
-    
                 if (res.success) {
+                    useModalStore.getState().openModal("Votre demande de rendez-vous a bien été prise en compte");
                     form.reset()
+                } else {
+                    useModalStore.getState().openModal("Echec de l'envoie, une erreur est survenue");
                 }
             }
-            console.log(value);
         }
     })
 

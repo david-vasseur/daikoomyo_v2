@@ -3,6 +3,7 @@
 import { useForm } from '@tanstack/react-form';
 import { NewsLetterSchema, TNewsLetterSchema } from '@/lib/schema';
 import { newUser } from '@/components/layout/footer/newsLetter.action';
+import { useModalStore } from '@/lib/stores/modalStore';
 
 
 export const NewsLetterForm = () => {
@@ -16,6 +17,9 @@ export const NewsLetterForm = () => {
         onSubmit: async ({ value }) => {
             const result = await newUser(value);
             if (result) {
+                useModalStore.getState().openModal(result.message);
+            }
+            if (result.success) {
                 form.reset();
             }
         }
