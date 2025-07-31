@@ -1,4 +1,8 @@
-import { z } from "zod"
+import { z } from "zod";
+
+export const NewsLetterSchema = z.object({
+    email: z.string().email("Vous devez renseigner un email valide")
+})
 
 export const homeSchema = z.object({
     fullName: z.string().min(1, "Le nom complet est requis"),
@@ -50,3 +54,4 @@ export const serviceSchema = z
 
 export type THomeSchema = z.infer<typeof homeSchema>
 export type TServiceSchema = z.infer<typeof serviceSchema>
+export type TNewsLetterSchema = z.infer<typeof NewsLetterSchema>

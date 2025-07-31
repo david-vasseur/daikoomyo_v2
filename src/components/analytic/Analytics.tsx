@@ -5,8 +5,12 @@ import { useEffect, useState } from "react"
 
 const Analytics = () => {
   const [enabled, setEnabled] = useState(false)
+  console.log(enabled);
+  
 
   useEffect(() => {
+    console.log("consent is running");
+    
     const consent = localStorage.getItem("site-consent")
     if (consent === "true") {
       setEnabled(true)

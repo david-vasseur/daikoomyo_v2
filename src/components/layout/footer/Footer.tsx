@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
+import { newUser } from './newsLetter.action';
+import { NewsLetterForm } from '@/components/features/form/NewsLetterForm';
 
 const Footer: React.FC = () => {
   return (
@@ -76,7 +78,8 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-4">
                 Abonnez-vous pour recevoir des inspirations spirituelles, des notifications d&apos;événements et des offres exclusives
             </p>
-            <form className="mb-4">
+            <NewsLetterForm />
+            {/* <form action={newUser} className="mb-4">
               <div className="flex">
                 <input 
                   type="email" 
@@ -90,9 +93,9 @@ const Footer: React.FC = () => {
                   S&apos;abonner
                 </button>
               </div>
-            </form>
+            </form> */}
             <p className="text-gray-500 text-sm">
-                En vous abonnant, vous acceptez notre politique de confidentialité et consentez à recevoir des informations de notre part
+                En vous abonnant, vous acceptez <Link href="/politique-de-confidentialite" className="underline">notre politique de confidentialité</Link> et consentez à recevoir des informations de notre part
             </p>
           </div>
         </div>
@@ -100,12 +103,11 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              <Link href="/auth">&copy; {new Date().getFullYear()}</Link> David Vasseur. Tous droits réservés.
+              <Link href="/auth">&copy; {new Date().getFullYear()}</Link> <a href='https://www.david-vasseur.fr' target='_blank'>David Vasseur</a>. Tous droits réservés.
             </p>
             <div className="flex space-x-6">
-                <a href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Politique de confidentialité</a>
-                <a href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Conditions d&apos;utilisation</a>
-                <a href="#" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Politique relative aux cookies</a>
+                <a href="/politique-de-confidentialite" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Politique de confidentialité</a>
+                <a href="/conditions-generales" className="text-gray-500 hover:text-purple-400 text-sm transition-colors">Conditions d&apos;utilisation</a>
             </div>
           </div>
         </div>

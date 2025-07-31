@@ -83,3 +83,10 @@ model Meet {
   dateStart DateTime
   dateEnd   DateTime
 }
+
+model Newsletter {
+  id        String    @id @map("_id") @default(auto()) @db.ObjectId
+  email     String
+  token     String
+  date      DateTime
+}
