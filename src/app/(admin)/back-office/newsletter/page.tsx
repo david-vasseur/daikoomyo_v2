@@ -4,6 +4,13 @@ import { getEmails } from '@/lib/pages/newsletter';
 
 export const dynamic = "force-dynamic";
 
+interface IEmail {
+    id: string;
+    email: string;
+    token: string;
+    date: Date;
+}
+
 const page = async () => {
 
     const emails = await getEmails();
@@ -22,11 +29,9 @@ const page = async () => {
         <h1 className="text-5xl text-center font-bold mt-20 text-shadow-lg text-shadow-pink-300 border-b-pink-300 border-b-2">Mes abonnés à la newsletter:</h1>
         <div className="flex flex-col gap-5">
              
-            {
-            // eslint-disable-next-line
-            emails.emails !== undefined && emails.emails?.length >= 1 && emails.emails.map((email, index) => {
+            {emails.emails !== undefined && emails.emails?.length >= 1 && emails.emails.map(( email: IEmail) => {
                 return (
-                    <div key={index} className={`p-5 rounded-lg shadow-2xl`}>
+                    <div key={email.id} className={`p-5 rounded-lg shadow-2xl`}>
                         <h2><span className="font-extrabold">{email.email.toUpperCase()}</span></h2>
                     </div>
                 )
