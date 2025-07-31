@@ -13,7 +13,7 @@ export const newUser = async ({ email }: { email: string } ) => {
         })
 
         if (existingEmail) {
-            const message = "Cet email est deja inscrit";
+            const message = "Cette adresse email est déjà inscrite à la newsletter.";
             return { success: false, message };
         } else {
             await prisma.newsletter.create({
@@ -23,12 +23,12 @@ export const newUser = async ({ email }: { email: string } ) => {
                     date: new Date()
                 }
             })
-            const message = "Email enegistré avec succès";
+            const message = "Merci ! Votre inscription à la newsletter a bien été prise en compte.";
             return { success: true, message };
         }
 
     } catch (error) {
         console.log(error);
-        return { success: false, message: "Une erreur est survenue." };
+        return { success: false, message: "Une erreur est survenue. Veuillez réessayer plus tard." };
     }
 }

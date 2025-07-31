@@ -34,10 +34,10 @@ export const ServiceForm = ({ content }: { content: IContent }) => {
             if(success) {
                 const res = await sendEmail(value);
                 if (res.success) {
-                    useModalStore.getState().openModal("Votre demande de rendez-vous a bien été prise en compte");
+                    useModalStore.getState().openModal("Votre demande de rendez-vous a bien été prise en compte.");
                     form.reset()
                 } else {
-                    useModalStore.getState().openModal("Echec de l'envoie, une erreur est survenue");
+                    useModalStore.getState().openModal("Échec de l’envoi : une erreur est survenue.");
                 }
             }
         }

@@ -21,10 +21,10 @@ export const HomeForm = () => {
         onSubmit: async ({ value }) => {
             const result = await sendContactEmail(value);
             if (result) {
-                useModalStore.getState().openModal("Votre demande de rendez-vous a bien été prise en compte");
+                useModalStore.getState().openModal("Votre demande de renseignement a bien été prise en compte.");
                 form.reset();
             } else {
-                useModalStore.getState().openModal("Echec de l'envoie, une erreur est survenue");
+                useModalStore.getState().openModal("Échec de l’envoi : une erreur est survenue.");
             }
         }
     })
