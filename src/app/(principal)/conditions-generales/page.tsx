@@ -18,10 +18,10 @@ function page() {
                 <div className="container mx-auto px-4 py-20 z-10 text-white">
                     <div className="max-w-3xl">
                         <h1 className="text-5xl md:text-6xl font-serif font-semibold leading-tight mb-6 opacity-0 animate-fadeIn" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-                            Conditions d'utilisation
+                            Conditions d&apos;utilisation
                         </h1>
                         <p className="text-xl mb-8 text-purple-100 opacity-0 animate-fadeIn" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-                            Les règles encadrant l'utilisation du site Daikoomyo et les services proposés.
+                            Les règles encadrant l&apos;utilisation du site Daikoomyo et les services proposés.
                         </p>
                         <a
                             href="#contact"
@@ -37,37 +37,37 @@ function page() {
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">1. Objet</h2>
                     <p className="font-medium mt-2">
-                        Les présentes conditions ont pour objet de définir les modalités d'utilisation du site https://www.daikoomyo.fr, propriété de Camille Boucher, et des services qui y sont proposés.
+                        Les présentes conditions ont pour objet de définir les modalités d&apos;utilisation du site https://www.daikoomyo.fr, propriété de Camille Boucher, et des services qui y sont proposés.
                     </p>
                 </div>
 
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">2. Acceptation</h2>
                     <p className="font-medium mt-2">
-                        En accédant au site et en utilisant ses services, l'utilisateur accepte pleinement et entièrement les présentes conditions d'utilisation.
+                        En accédant au site et en utilisant ses services, l&apos;utilisateur accepte pleinement et entièrement les présentes conditions d&apos;utilisation.
                     </p>
                 </div>
 
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">3. Accès au site</h2>
                     <p className="font-medium mt-2">
-                        Le site est accessible gratuitement à tout utilisateur disposant d'un accès à Internet. Les frais liés à l'accès (connexion, matériel, etc.) sont à la charge de l'utilisateur.
+                        Le site est accessible gratuitement à tout utilisateur disposant d&apos;un accès à Internet. Les frais liés à l&apos;accès (connexion, matériel, etc.) sont à la charge de l&apos;utilisateur.
                     </p>
                 </div>
 
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">4. Contenu et propriété intellectuelle</h2>
                     <p className="font-medium mt-2">
-                        Tous les contenus du site (textes, images, vidéos, logo, etc.) sont protégés par le droit d'auteur. Toute reproduction ou représentation totale ou partielle sans autorisation est interdite.
+                        Tous les contenus du site (textes, images, vidéos, logo, etc.) sont protégés par le droit d&apos;auteur. Toute reproduction ou représentation totale ou partielle sans autorisation est interdite.
                     </p>
                 </div>
 
                 <div>
-                    <h2 className="font-bold text-3xl text-purple-500">5. Comportement de l'utilisateur</h2>
+                    <h2 className="font-bold text-3xl text-purple-500">5. Comportement de l&apos;utilisateur</h2>
                     <p className="font-medium mt-2">
-                        L'utilisateur s'engage à ne pas :<br/>
+                        L&apos;utilisateur s&apos;engage à ne pas :<br/>
                         - Utiliser le site à des fins illicites ou contraires aux bonnes mœurs<br/>
-                        - Détourner les formulaires à d'autres fins que celles prévues (prise de rendez-vous, contact)<br/>
+                        - Détourner les formulaires à d&apos;autres fins que celles prévues (prise de rendez-vous, contact)<br/>
                         - Publier de faux avis ou commentaires diffamatoires
                     </p>
                 </div>
@@ -82,14 +82,14 @@ function page() {
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">7. Responsabilité</h2>
                     <p className="font-medium mt-2">
-                        Daikoomyo ne saurait être tenu responsable des dommages directs ou indirects liés à l'utilisation du site. Les contenus proposés, notamment sur le blog, sont à visée informative et ne remplacent en aucun cas un avis médical.
+                        Daikoomyo ne saurait être tenu responsable des dommages directs ou indirects liés à l&apos;utilisation du site. Les contenus proposés, notamment sur le blog, sont à visée informative et ne remplacent en aucun cas un avis médical.
                     </p>
                 </div>
 
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">8. Disponibilité du service</h2>
                     <p className="font-medium mt-2">
-                        Le site est normalement accessible 24h/24. Toutefois, Camille Boucher se réserve le droit d'interrompre l'accès pour maintenance ou tout autre motif sans préavis.
+                        Le site est normalement accessible 24h/24. Toutefois, Camille Boucher se réserve le droit d&apos;interrompre l&apos;accès pour maintenance ou tout autre motif sans préavis.
                     </p>
                 </div>
 

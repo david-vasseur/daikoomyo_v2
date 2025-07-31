@@ -70,7 +70,7 @@ function page() {
                 </div>
                 <div>
                     <h2 className="font-bold text-3xl text-purple-500">5. Cookies et traceurs</h2>
-                    <p className="font-medium mt-2">Lors de votre première visite, un bandeau vous informe de l'utilisation de cookies. <br/>
+                    <p className="font-medium mt-2">Lors de votre première visite, un bandeau vous informe de l&apos;utilisation de cookies. <br/>
                         <br/>
                         Cookies utilisés : <br/>
                         Cookies analytiques (Google Analytics), activés uniquement après consentement <br/>

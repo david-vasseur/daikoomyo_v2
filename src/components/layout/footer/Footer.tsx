@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import { newUser } from './newsLetter.action';
 import { NewsLetterForm } from '@/components/features/form/NewsLetterForm';
 
 const Footer: React.FC = () => {
