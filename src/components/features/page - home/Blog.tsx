@@ -3,7 +3,6 @@ import { getPost } from '@/lib/pages/blog';
 import Link from 'next/link';
 import React from 'react';
 
-
 const Blog: React.FC = async () => {
 
     const blogPosts = await getPost();

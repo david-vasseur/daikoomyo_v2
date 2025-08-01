@@ -6,6 +6,8 @@ import Hero from "@/components/features/page - home/Hero";
 import Services from "@/components/features/page - home/Services";
 import { getLastComments } from "@/lib/pages/comments";
 
+export const revalidate = 0;
+
 const Page = async () => {
 
 	const comments = await getLastComments();

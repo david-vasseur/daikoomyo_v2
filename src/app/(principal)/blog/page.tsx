@@ -38,41 +38,10 @@ export const metadata = {
 
 async function Page()  {
 
-    // const blogPosts = postData;
     const blogPosts = await getPost();
 
     return (
         <div className="text-gray-800">
-            {/* <section id="side" className="py-20 w-1/5 bg-gradient-to-r from-gray-900/5 to-gray-200/60 shadow-xl">
-                <label
-                className="fixed left-5 top-30 shadow-lg flex items-center px-4 py-2 rounded-lg border border-gray-200 hover:border-purple-500 cursor-pointer transition-colors"
-                >
-                <input type="checkbox" className="mr-3 accent-purple-600" />
-                <span className="text-sm font-semibold">EFT</span>
-                </label> 
-
-                <label
-                className="fixed left-5 top-40 shadow-lg flex items-center px-4 py-2 rounded-lg border border-gray-200 hover:border-purple-500 cursor-pointer transition-colors"
-                >
-                <input type="checkbox" className="mr-3 accent-purple-600" />
-                <span className="text-sm font-semibold">Reiki</span>
-                </label>
-
-                <label
-                className="fixed left-5 top-50 shadow-lg flex items-center px-4 py-2 rounded-lg border border-gray-200 hover:border-purple-500 cursor-pointer transition-colors"
-                >
-                <input type="checkbox" className="mr-3 accent-purple-600" />
-                <span className="text-sm font-semibold">fleurs de bach</span>
-                </label>
-
-                <label
-                className="fixed left-5 top-60 shadow-lg flex items-center px-4 py-2 rounded-lg border border-gray-200 hover:border-purple-500 cursor-pointer transition-colors"
-                >
-                <input type="checkbox" className="mr-3 accent-purple-600" />
-                <span className="text-sm font-semibold">Tirage</span>
-                </label>
-        
-            </section> */}
             <section id="blog" className="py-40 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center mb-16">
@@ -86,7 +55,7 @@ async function Page()  {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {blogPosts.length > 1 ? blogPosts.map((post, index) => (
+                    {blogPosts.length > 0 ? blogPosts.map((post, index) => (
                         <BlogCard 
                             key={index}
                             title={post.title}
