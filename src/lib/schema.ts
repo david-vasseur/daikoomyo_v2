@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+export const CreateNewsLetterSchema = z.object({
+    title: z.string().min(5, "Le titre doit comporter au moins 5 caractères"),
+    content: z.string()
+})
+
 export const NewsLetterSchema = z.object({
     email: z.string().email("Vous devez renseigner un email valide")
 })
@@ -55,3 +60,4 @@ export const serviceSchema = z
 export type THomeSchema = z.infer<typeof homeSchema>
 export type TServiceSchema = z.infer<typeof serviceSchema>
 export type TNewsLetterSchema = z.infer<typeof NewsLetterSchema>
+export type TCreateNewsLetterSchema = z.infer<typeof CreateNewsLetterSchema>

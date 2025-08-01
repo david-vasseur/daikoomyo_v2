@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { useClerk } from '@clerk/nextjs';
+import { useClerk, useUser } from '@clerk/nextjs';
 import { usePathname } from 'next/navigation';
 import { BackButton } from './BackButton';
 
@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
 
     const pathName = usePathname();
     const { signOut } = useClerk()
+    const { isSignedIn } = useUser();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -42,6 +43,10 @@ const Navbar: React.FC = () => {
         setIsOpen(!isOpen);
     };
 
+    if (!isSignedIn) {
+        return null;
+    }
+
     return (
         <nav 
         className={`fixed w-full z-50 transition-all duration-300 ${
@@ -66,7 +71,7 @@ const Navbar: React.FC = () => {
 
                 <div className="hidden md:block">
                     <button
-                    className="bg-red-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-md border-2 border-purple-800"
+                    className="bg-red-600 hover:bg-purple-700 text-white font-semibold text-sm px-4 py-2 rounded-full transition-colors shadow-md shadow-gray-500 cursor-pointer"
                     onClick={() => signOut({ redirectUrl: '/' })}
                     >
                     Se deconnecter
