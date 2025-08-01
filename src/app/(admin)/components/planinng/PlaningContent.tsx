@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import TitlePage from "../TitlePage";
-import BlogCard from "@/components/ui/BlogCard";
 import IMeet from "@/types/meet";
 
 
