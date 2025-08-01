@@ -1,6 +1,6 @@
-import React from 'react'
-import { BackButton } from '../../components/BackButton';
+import React from 'react';
 import { getEmails } from '@/lib/pages/newsletter';
+import TitlePage from '../../components/TitlePage';
 
 export const dynamic = "force-dynamic";
 
@@ -13,22 +13,21 @@ interface IEmail {
 
 const page = async () => {
 
+    
     const emails = await getEmails();
 
     if (!emails.success) {
         return (
-            <div className="py-20 bg-pink-200 h-[100vh] flex flex-col gap-10 items-center">
+            <div className="py-20 bg-pink-50 h-[100vh] flex flex-col gap-10 items-center">
                 <h1>{emails.message}</h1>
             </div>
         )
     }
 
     return (
-    <div className="py-20 bg-pink-200 min-h-[100vh] flex flex-col gap-10 items-center">
-        <BackButton />
-        <h1 className="text-5xl text-center font-bold mt-20 text-shadow-lg text-shadow-pink-300 border-b-pink-300 border-b-2">Mes abonnés à la newsletter:</h1>
+    <div className="py-20 bg-pink-50 min-h-[100vh] flex flex-col gap-10 items-center">
+        <TitlePage />
         <div className="flex flex-col gap-5">
-             
             {emails.emails !== undefined && emails.emails?.length >= 1 && emails.emails.map(( email: IEmail) => {
                 return (
                     <div key={email.id} className={`p-5 rounded-lg shadow-2xl`}>

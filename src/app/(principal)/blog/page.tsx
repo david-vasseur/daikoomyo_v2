@@ -2,6 +2,8 @@ import React from 'react';
 import BlogCard from '@/components/ui/BlogCard';
 import { getPost } from '@/lib/pages/blog';
 
+export const revalidate = 0;
+
 export const metadata = {
     title: "Blog bien-être et soins énergétiques - Daikoomyo",
     description: "Explorez nos articles sur le bien-être, les soins énergétiques, l’EFT, les Fleurs de Bach et plus encore. Informations, conseils et inspiration par Daikoomyo.",

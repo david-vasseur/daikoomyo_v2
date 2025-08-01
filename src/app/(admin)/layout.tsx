@@ -1,5 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
+import Navbar from "./components/NavBar";
 
 
 
@@ -18,6 +19,7 @@ export default function AdminLayout({
 				<body
 					className={` antialiased`}
 				>
+					<Navbar />
 					<main>
 						{children}
 					</main>					

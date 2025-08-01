@@ -1,7 +1,6 @@
 "use client"
 
 import PostEditor from "@/components/features/post editor/PostEditor";
-import { BackButton } from "../../components/BackButton";
 import { createPost } from "./post.action";
 import { useState } from "react";
 
@@ -10,8 +9,7 @@ export default function Page() {
 	const [stringArticle, setStringArticle] = useState("")
 
     return (
-		<div className="py-20 bg-pink-100 min-h-[100vh] flex flex-col gap-10 items-center">
-			<BackButton />
+		<div className="py-20 bg-pink-50 min-h-[100vh] flex flex-col gap-10 items-center">
 			<h1 className="text-5xl font-bold mt-20 text-shadow-lg text-shadow-pink-300 border-b-pink-300 border-b-2">Creer un article</h1>
 			<form action={createPost} className="flex flex-col gap-10 items-center">
 				<input type="text" name="title" className="px-3 py-1.5 shadow-gray-800 shadow-md rounded-lg border-gray-400 border-2" placeholder="Titre" />
