@@ -1,13 +1,10 @@
 "use client"
 
-import dynamic from 'next/dynamic';
-import React, { useState } from 'react'
+import PostEditor from '@/components/features/post editor/PostEditor';
+import React, { useState } from 'react';
 import { createPost } from './post.action';
 
 function BlogForm() {
-    const PostEditor = dynamic(() => import('@/components/features/post editor/PostEditor'), {
-        ssr: false,
-    });
 
     const [stringArticle, setStringArticle] = useState("");
 
