@@ -20,7 +20,7 @@ function PostEditor({ onUpdate }: { onUpdate: (json: Record<string, any>) => voi
 		StarterKit,
 		Image.configure({
 			HTMLAttributes: {
-			class: 'w-full max-h-[25vh] object-cover',
+			class: 'block w-[760px] md:w-[60%] aspect-square object-contain mx-auto',
 			},
 		}),
 		BubbleMenuExtension,

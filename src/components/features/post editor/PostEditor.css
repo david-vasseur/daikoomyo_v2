@@ -1,5 +1,5 @@
 .post-editor h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .post-editor h2 {
@@ -8,4 +8,8 @@
 
 .post-editor h3 {
     font-size: 1.1rem;
+}
+
+.ProseMirror {
+  font-family: inherit; 
 }
