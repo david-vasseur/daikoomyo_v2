@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
         ...slugs.map((slug) => {
             return {
-                url: `/post/${slug.slug}`,
+                url: `/blog/${slug.slug}`,
                 priority: 0.8,
                 changeFrequency: "weekly" as const,
             }
