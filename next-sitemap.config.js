@@ -1,18 +1,18 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.daikoomyo.fr',
-  generateRobotsTxt: true,
-  exclude: ['/back-office', '/back-office/*'], 
-  sitemapSize: 5000,
-  changefreq: 'weekly',
-  priority: 0.7,
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/back-office', '/back-office/*'],
-      },
-    ],
-  },
+	siteUrl: 'https://www.daikoomyo.fr',
+	generateIndexSitemap: false,
+	generateRobotsTxt: true,
+	robotsTxtOptions: {
+		policies: [
+			{
+				userAgent: '*',
+				allow: '/',
+				disallow: ['/back-office', '/back-office/*'],
+			},
+		],
+		additionalSitemaps: [
+			'https://www.daikoomyo.fr/sitemap.xml',
+		],
+	},
 };
