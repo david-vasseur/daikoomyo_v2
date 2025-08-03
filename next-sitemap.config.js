@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
 	siteUrl: 'https://www.daikoomyo.fr',
+	generateSitemaps: false,
 	generateIndexSitemap: false,
 	generateRobotsTxt: true,
 	robotsTxtOptions: {
