@@ -10,6 +10,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: "/",
             priority: 1,
+            changeFrequency: "monthly" as const
+        },
+        {
+            url: "/eft",
+            priority: 0.9,
+            changeFrequency: "monthly" as const
+        },
+        {
+            url: "/fleurs-de-bach",
+            priority: 0.9,
+            changeFrequency: "monthly" as const
+        },
+        {
+            url: "/soin-energetique",
+            priority: 0.9,
+            changeFrequency: "monthly" as const
+        },
+        {
+            url: "/blog",
+            priority: 0.9,
+            changeFrequency: "weekly" as const
         },
         ...slugs.map((slug) => {
             return {

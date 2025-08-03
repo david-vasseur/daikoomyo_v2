@@ -40,6 +40,16 @@ export const createPost = async ( { value }: { value: TBlogPostSchema } ) => {
             },
         });
 
+
+        if (process.env.NODE_ENV === "production") {
+            try {
+                await fetch("https://www.google.com/ping?sitemap=https://www.daikoomyo.fr/sitemap.xml");
+                await fetch("https://www.bing.com/ping?sitemap=https://www.daikoomyo.fr/sitemap.xml");
+            } catch (error) {
+                console.warn("Erreur lors du ping des moteurs de recherche :", error);
+            }
+        }
+
         return { success: true, message: "Votre article a bien été publié" }
     }  
 }
