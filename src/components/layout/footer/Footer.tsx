@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                 </ul>
           </div>
           
-          <div>
+          <div id="newsletter">
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
             <p className="text-gray-400 mb-4">
                 Abonnez-vous pour recevoir des inspirations spirituelles, des notifications d&apos;événements et des offres exclusives

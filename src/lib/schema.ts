@@ -1,5 +1,17 @@
 import { z } from "zod";
 
+export const blogPostSchema = z.object({
+  title: z.string().min(1, "Le titre est requis"),
+  slug: z
+    .string()
+    .min(1, "Le slug est requis")
+    .regex(/^[a-z0-9-]+$/, "Le slug ne doit contenir que des minuscules, chiffres et tirets"),
+  category: z.string().min(1, "La catégorie est requise"),
+  image: z.string().url("L'image doit être une URL valide"),
+  excerpt: z.string().min(1, "Le résumé est requis"),
+  article: z.string().min(10, "L'article est vide ou invalide"),
+});
+
 export const CreateNewsLetterSchema = z.object({
     title: z.string().min(5, "Le titre doit comporter au moins 5 caractères"),
     content: z.string()
@@ -57,6 +69,7 @@ export const serviceSchema = z
     }
   });
 
+export type TBlogPostSchema = z.infer<typeof blogPostSchema>  
 export type THomeSchema = z.infer<typeof homeSchema>
 export type TServiceSchema = z.infer<typeof serviceSchema>
 export type TNewsLetterSchema = z.infer<typeof NewsLetterSchema>

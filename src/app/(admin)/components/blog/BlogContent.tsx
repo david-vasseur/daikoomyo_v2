@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import TitlePage from "../TitlePage";
-import BlogForm from "./BlogForm";
 import { IPost } from "@/types/post";
 import BlogCard from "@/components/ui/BlogCard";
+import PostEditor from "@/components/features/post editor/PostEditor";
+import { BlogForm } from "./BlogForm";
 
 
 const ClientBlog = ({ articles }: { articles: IPost[] }) => {
     const [selected, setSelected] = useState(1);
+    const [stringArticle, setStringArticle] = useState("");
 
     return (
         <>
@@ -23,7 +25,8 @@ const ClientBlog = ({ articles }: { articles: IPost[] }) => {
 
                 {selected === 1 && (
                     <div className="text-purple-800 font-semibold flex flex-col gap-6 justify-center items-center">
-                        <BlogForm />
+                        <PostEditor onUpdate={(post) => setStringArticle(JSON.stringify(post))} />
+                        <BlogForm stringArticle={stringArticle} />
                     </div>
                 )}
 
